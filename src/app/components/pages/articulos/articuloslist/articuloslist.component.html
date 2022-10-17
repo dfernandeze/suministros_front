@@ -1,0 +1,76 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Listado de Artículos</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+                        <li class="breadcrumb-item active">Articulos</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a routerLink="../add" class="btn btn-primary">Agregar Articulo</a>
+                        </div>
+
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th>Articulo</th>
+                                        <th>Categoria</th>
+                                        <th style="width: 40px">Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let art of articulos; let i = index">
+                                        <td>{{ i+1 }}</td>
+                                        <td>{{ art.articulo }}</td>
+                                        <td>{{ art.categoria }}</td>
+                                        <td>
+                                            <span class="badge bg-success" *ngIf="art.estado === 'ACTIVO'">{{ art.estado
+                                                }}</span>
+                                            <span class="badge bg-danger" *ngIf="art.estado === 'INACTIVO'">{{
+                                                art.estado }}</span>
+                                        </td>
+                                        <td style="width: 110px;">
+                                            <button class="btn btn-danger" (click)="eliminar(39)">
+                                                {{art.id_articulo}}
+                                                <i class="fa fa-trash"></i></button>
+                                            <!-- 
+                                            <button routerLink="../edit/{{art.id_articulo}}"
+                                                class="btn btn-outline text-warning"><i class="fa fa-edit"></i></button>
+                                                -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="card-footer clearfix">
+                            <ul class="pagination pagination-sm m-0 float-right">
+                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

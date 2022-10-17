@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Agregar Solicitud</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+            <li class="breadcrumb-item"><a routerLink="../../solicitudes/list">Listado de Solicitud</a></li>
+            <li class="breadcrumb-item active">Agregar Solicitud</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="card">
+            <div class="card-header bg-info">
+              <h4 class="card-title ">
+
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="tipo">Tipo Solicitud</label>
+                  <select name="tipo" id="tipo" class="form-control">
+                    <option value="">Elige una opción</option>
+                    <option value="R">Retirar de Suministros</option>
+                    <option value="T">Entrega en Oficina</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="dependecia">Dependencia</label>
+                  <select name="dependencia" id="dependencia" class="form-control">
+                    <option value="">Elige una opción</option>
+                    <option value="1">DGTIC</option>
+                    <option value="2">DCS</option>
+                    <option value="3">DF</option>
+                    <option value="4">VMPS</option>
+                    <option value="5">DGGDP</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="obs">Observaciones</label>
+                  <textarea id="obs" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+
+                <div class="col-md-2">
+
+                  <a style="width: 100%" routerLink="../../solicitudes/list/" class="btn btn-secondary">Cancelar</a>
+                </div>
+                <div class="col-md-2">
+                  <button style="width: 100%" class=" mr-2 btn btn-info">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

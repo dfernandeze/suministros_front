@@ -1,0 +1,49 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Agregar Artículos</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item"><a routerLink="../list">Listado de Artículos</a></li>
+                        <li class="breadcrumb-item active">Agregar Artículo</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <label for="articulo"> <b>Articulo</b></label>
+                            <input type="text" class="form-control" [(ngModel)]="art">
+                            <div class="row mt-3">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for=""><b>Categoría</b></label>
+                                    <select name="cat" id="cat" class="form-control" [(ngModel)]="categoria">
+
+                                        <option value="2" selected>UTILES DE OFICINA</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <label for=""><b>Estado</b></label>
+                                    <input type="text" class="form-control" value="A" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" (click)="addArticles()">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

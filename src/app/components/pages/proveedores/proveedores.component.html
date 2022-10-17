@@ -1,0 +1,52 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Proveedores</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+                        <li class="breadcrumb-item active">Proveedores</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-header bg-info">
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped" style="text-align: center">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Proveedor</th>
+                                        <th>Contacto</th>
+                                        <th>Telefono Contacto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let p of proveedor;let i = index">
+                                        <td>{{ i+1 }}</td>
+                                        <td>{{ p.proveedor }}</td>
+                                        <td>{{ p.contacto }}</td>
+                                        <td>{{ p.telefono_contacto }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer bg-info">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
